@@ -15,11 +15,17 @@
 
         <activity
             android:name=".ActivityA"
-            android:exported="true">
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:taskAffinity=".ActivityA">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SENDTO" />
+                <data android:scheme="mailto" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
 
             <meta-data
@@ -29,15 +35,15 @@
 
         <activity
             android:name=".ActivityB"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:taskAffinity=".ActivityB" />
 
         <activity
             android:name=".ActivityC"
-            android:exported="false">
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:taskAffinity=".ActivityB">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
@@ -45,7 +51,9 @@
 
     <activity
         android:name=".ActivityD"
-        android:exported="false">
+        android:exported="false"
+        android:launchMode="singleTask"
+        android:taskAffinity=".ActivityB" >
         <meta-data
             android:name="android.app.lib_name"
             android:value="" />

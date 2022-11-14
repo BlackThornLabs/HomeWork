@@ -1,4 +1,4 @@
-package blackthornlabs.com.github.lumierebros
+package blackthornlabs.com.github.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

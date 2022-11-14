@@ -3,7 +3,6 @@ package blackthornlabs.com.github.lumierebros
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 
 class ActivityA : AppCompatActivity() {
@@ -13,6 +12,7 @@ class ActivityA : AppCompatActivity() {
         val buttonB = findViewById<Button>(R.id.buttonb)
         buttonB.setOnClickListener {
             val intent = Intent(this, ActivityB::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             startActivity(intent)
         }
     }

@@ -1,4 +1,4 @@
-package blackthornlabs.com.github.lumierebros
+package blackthornlabs.com.github.activities
 
 import android.content.Intent
 import android.content.Intent.*
